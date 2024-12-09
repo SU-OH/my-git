@@ -1,0 +1,27 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+    /* 스피너 애니메이션 */
+    .loader {
+      border-width: 2px;
+      border-style: solid;
+      border-color: #d1d5db #d1d5db transparent transparent; /* 회색과 투명 조합 */
+      border-radius: 50%;
+    }
+    .animate-spin {
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+  
